@@ -104,3 +104,83 @@ buttons.forEach((button) => {
     });
 });
 
+document.addEventListener('keydown', function(event) {
+    switch (event.key) {
+        case 'enter':
+            event.preventDefault();
+            document.getElementById('eq').click();
+            break;
+        case '=':
+            event.preventDefault();
+            document.getElementById('eq').click();
+            break;
+        case '1':
+            event.preventDefault();
+            document.getElementById('_1').click();
+            break;
+        case '2':
+            event.preventDefault();
+            document.getElementById('_2').click();
+            break;
+        case '3':
+            event.preventDefault();
+            document.getElementById('_3').click();
+            break;
+        case '4':
+            event.preventDefault();
+            document.getElementById('_4').click();
+            break;
+        case '5':
+            event.preventDefault();
+            document.getElementById('_5').click();
+            break;
+        case '6':
+            event.preventDefault();
+            document.getElementById('_6').click();
+            break;
+        case '7':
+            event.preventDefault();
+            document.getElementById('_7').click();
+            break;
+        case '8':
+            event.preventDefault();
+            document.getElementById('_8').click();
+            break;
+        case '9':
+            event.preventDefault();
+            document.getElementById('_9').click();
+            break;
+        case '0':
+            event.preventDefault();
+            document.getElementById('_0').click();
+            break;
+        case '.':
+            event.preventDefault();
+            document.getElementById('_.').click();
+            break;
+        case '+':
+            event.preventDefault();
+            document.getElementById('add').click();
+            break;
+        case '-':
+            event.preventDefault();
+            document.getElementById('sub').click();
+            break;
+        case '/':
+            event.preventDefault();
+            document.getElementById('div').click();
+            break;
+        case '*':
+            event.preventDefault();
+            document.getElementById('mul').click();
+            break;
+        case 'Backspace':
+            event.preventDefault();
+            if (event.ctrlKey) {
+                document.getElementById('clr').click();
+                break
+            }
+            document.getElementById('del').click();
+            break;
+    }
+  });
