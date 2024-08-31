@@ -34,7 +34,17 @@ function operate(operator, a, b) {
 function equate() {
     primaryNumber = Number(primaryNumber)
     if (operator == "") return
-    primaryNumber = operate(operator, Number(secondaryNumber), primaryNumber);
+
+    let result = operate(operator, Number(secondaryNumber), primaryNumber);
+    let decimalPlaces = Math.max(15 - String(Math.round(result)).length, 0)
+
+    primaryNumber = roundNumber(result, decimalPlaces)
+
+
+}
+
+function roundNumber(num, dec) {
+    return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
 }
 
 const buttons = document.querySelectorAll(".button");
@@ -57,9 +67,10 @@ buttons.forEach((button) => {
         element = event.target;
         let id = element.id.replace("_","");
         if (element.classList.contains("number")) {
-
+            if (String(primaryNumber).length >= 16) return;
             primaryNumber += id;
             if (id != "0") primaryNumber = Number(primaryNumber);
+            if (primaryNumber == "00") primaryNumber = "0"
             screenPrimary.textContent = primaryNumber;
         } else if (element.classList.contains("function")) {
             if (primaryNumber == "") return;
@@ -86,6 +97,7 @@ buttons.forEach((button) => {
             screenPrimary.textContent = primaryNumber;
         } else if (element.classList.contains("decimal")) {
             if (String(primaryNumber).includes('.')) return
+            if (String(primaryNumber).length >= 15) return;
             primaryNumber += '.'
             screenPrimary.textContent = primaryNumber;
         }

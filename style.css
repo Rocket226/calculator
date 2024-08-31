@@ -102,6 +102,10 @@ body {
     cursor: pointer;
 }
 
+.button:hover {
+    opacity: 0.7;
+}
+
 .left-container .button {
     width: calc(100%/3);
     height: 20%;
@@ -130,6 +134,7 @@ body {
 #eq {
     background-color: #F69607;
     color: #F7F7F7;
+    font-weight: bold;
 }
 
 footer {
