@@ -11,6 +11,10 @@ function multiply(a, b) {
 };
 
 function divide(a, b) {
+    if (b == 0) {
+        alert("You can't divide by zero")
+        return a;
+    }
     return a / b;
 };
 
@@ -53,8 +57,9 @@ buttons.forEach((button) => {
         element = event.target;
         let id = element.id.replace("_","");
         if (element.classList.contains("number")) {
+
             primaryNumber += id;
-            primaryNumber = primaryNumber;
+            if (id != "0") primaryNumber = Number(primaryNumber);
             screenPrimary.textContent = primaryNumber;
         } else if (element.classList.contains("function")) {
             if (primaryNumber == "") return;

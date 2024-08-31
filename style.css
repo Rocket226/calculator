@@ -1,23 +1,51 @@
-
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: auto 0;
 }
 
 #calculator {
     width: 400px;
+    padding: 0 32px 32px 32px;
+    background-color: #ababab;
+    border-radius: 20px;
+    border: 3px solid #2c2c2c;
+}
+
+.top-text {
+    display: flex;
+    height: 32px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 12px;
+}
+
+.top-text h3 {
+    margin: 0;
+    color: #F7F7F7;
+    font-family: monospace;
+}
+
+.top-text h2 {
+    margin: 0;
 }
 
 .screen {
     width: 100%;
     height: 100px;
-    background-color: black;
-    border: 1px solid white;
+    background-color: #2c2c2c;
+    border: 3px solid #ababab;
     box-sizing: border-box;
     margin-bottom: 16px;
-    color: white;
+    color: #F7F7F7;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -25,6 +53,7 @@ body {
     align-items: flex-end;
     padding: 16px;
     font-family: monospace;
+    border-radius: 20px;
 }
 
 #secondary-display {
@@ -61,13 +90,16 @@ body {
 
 .button {
     display: flex;
-    background-color: aquamarine;
+    background-color: #F7F7F7;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+    border: 3px solid #ababab;
     box-sizing: border-box;
     font-family: monospace;
     font-size: 24px;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .left-container .button {
@@ -86,4 +118,39 @@ body {
 
 #eq {
     height: 40%;
+}
+
+#clr,
+#del{
+    background-color: #F35733;
+    color: #F7F7F7;
+}
+
+.function,
+#eq {
+    background-color: #F69607;
+    color: #F7F7F7;
+}
+
+footer {
+    
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 1em;
+}
+
+footer a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: black;
+    text-decoration: none;
 }
