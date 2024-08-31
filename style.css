@@ -20,12 +20,22 @@ body {
     color: white;
     text-align: right;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     padding: 16px;
-    font-size: 36px;
     font-family: monospace;
 }
+
+#secondary-display {
+    font-size: 18px;
+}
+
+#primary-display {
+    font-size: 36px;
+    height: 1em;
+}
+
 
 .calculator-buttons {
     display: flex;
