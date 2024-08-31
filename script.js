@@ -106,7 +106,7 @@ buttons.forEach((button) => {
 
 document.addEventListener('keydown', function(event) {
     switch (event.key) {
-        case 'enter':
+        case 'Enter':
             event.preventDefault();
             document.getElementById('eq').click();
             break;
